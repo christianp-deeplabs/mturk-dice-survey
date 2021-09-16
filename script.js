@@ -7,6 +7,12 @@ $(document).ready(function() {
 
   setProgressBar(current);
 
+  // randomize order of list elements
+  var ul = document.querySelector('ul');
+  for (var i = ul.children.length; i >= 0; i--) {
+      ul.appendChild(ul.children[Math.random() * i | 0]);
+  }
+
   $(".next").click(function() {
 
     current_fs = $(this).parent();
@@ -91,6 +97,8 @@ $(document).ready(function() {
     var image1 = document.querySelectorAll("img")[0];
 
     image1.setAttribute("src", randomImageSource);
+
+    document.getElementById('realroll').value = n;
 
     this.disabled = true;
 

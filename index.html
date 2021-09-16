@@ -71,39 +71,54 @@
                 <input type="button" class="previous action-button-previous" value="Previous" />
               </fieldset>
 
-
-
               <fieldset class="pure-group">
                 <div>
                     <h2 class="steps">Step 3 of 4</h2>
                 </div>
+                <br>
                 <h3> Ranging from 1 (doesn't apply) to 7 (applies most), I see myself as someone who.. </h3>
                 <br>
-
-                <label for="worries">worries a lot </label>
-                <input id="worries" type="text" name="worries" list="worrieslist">
-                <datalist id="worrieslist">
-                  <option value="1 least">
-                  <option value="2">
-                  <option value="3">
-                  <option value="4">
-                  <option value="5">
-                  <option value="6">
-                  <option value="7 most">
-                </datalist>
-
-                <label for="talkative">is talkative </label>
-                <input id="talkative" type="text" name="talkative" list="talklist">
-                <datalist id="talklist">
-                  <option value="1 least">
-                  <option value="2">
-                  <option value="3">
-                  <option value="4">
-                  <option value="5">
-                  <option value="6">
-                  <option value="7 most">
-                </datalist>
-
+                <ul>
+                  <li>
+                    <label for="worries">worries a lot </label>
+                    <input id="worries" type="text" name="worries" list="worrieslist">
+                    <datalist id="worrieslist">
+                      <option value="1 least">
+                      <option value="2">
+                      <option value="3">
+                      <option value="4">
+                      <option value="5">
+                      <option value="6">
+                      <option value="7 most">
+                    </datalist>
+                  </li>
+                  <li>
+                    <label for="talkative">is talkative </label>
+                    <input id="talkative" type="text" name="talkative" list="talklist">
+                    <datalist id="talklist">
+                      <option value="1 least">
+                      <option value="2">
+                      <option value="3">
+                      <option value="4">
+                      <option value="5">
+                      <option value="6">
+                      <option value="7 most">
+                    </datalist>
+                  </li>
+                  <li>
+                    <label for="nervous">gets nervous sometimes </label>
+                    <input id="nervous" type="text" name="nervous" list="nervoustlist">
+                    <datalist id="nervoustlist">
+                      <option value="1 least">
+                      <option value="2">
+                      <option value="3">
+                      <option value="4">
+                      <option value="5">
+                      <option value="6">
+                      <option value="7 most">
+                    </datalist>
+                  </li>
+                </ul>
                 <input type="button" class="next action-button" value="Next" />
                 <input type="button" class="previous action-button-previous" value="Previous" />
 
@@ -121,11 +136,14 @@
                           <div>
                             <h2> </h2>
                             <br>
-                            <img class="img1" src="images/image0.png">
+                            <img class="img1" src="images/image0.jpg">
                             <br>
                             <input type="button" class="roll action-button-roll" value="Roll!" />
                           </div>
                       </div>
+
+                      <input type="hidden" id="realroll" name="real_roll" value="" />
+
                       <label for="diceroll">What number did you roll?: </label>
                       <input id="diceroll" name="reported_roll" placeholder="1-6" />
                   </div>
@@ -154,6 +172,10 @@
       </div>
     </div>
   </div>
+
+  <footer>
+    Deep Labs, Inc. 2021
+  </footer>
 
   <!-- Submit the Form to Google Using "AJAX" -->
   <script data-cfasync="false" src="form-submission-handler.js"></script>
